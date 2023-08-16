@@ -1,0 +1,98 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  font-size: 16px;
+  --blue-200: #00d1ff;
+  --blue-700: #00242c;
+}
+
+body {
+  min-height: 100vh;
+  background: black;
+}
+
+#grilla {
+  display: grid;
+  min-height: 100vh;
+  grid-template-areas:
+    'header header header'
+    'nav section1 banner'
+    'nav section2 banner'
+    'footer footer footer';
+  grid-template-rows: 50px 1fr 1fr 25px;
+  grid-template-columns: 17% auto 15%;
+}
+
+footer {
+  grid-area: footer;
+  background-color: rgb(20, 20, 19);
+  color: whitesmoke;
+  font-size: 1rem;
+  text-align: center;
+  margin: auto;
+  width: 100%;
+}
+
+section#section1 {
+  grid-area: section1;
+  background: var(--blue-700);
+}
+
+section#section2 {
+  grid-area: section2;
+  background: var(--blue-700);
+}
+
+nav {
+  grid-area: nav;
+  background-color: var(--blue-700);
+}
+
+aside#banner {
+  grid-area: banner;
+  background-color: rgb(252, 211, 136);
+  overflow-y: scroll;
+}
+
+nav button {
+  width: 90%;
+  margin: 8px 4px;
+  padding: 0.41rem;
+  border-radius: 0.5rem;
+  background: whitesmoke;
+  border: 2px groove rgb(0, 0, 0);
+  margin-top: 16px;
+}
+
+nav button:hover {
+  width: 90%;
+  margin: 8px 4px;
+  padding: 0.41rem;
+  border-radius: 0.5rem;
+  color: black;
+  background: var(--blue-200);
+  margin-top: 15px;
+}
+
+nav hr {
+  background-color: var(--blue-200);
+  height: 0.81rem;
+  width: 80%;
+  margin: 20px auto;
+  border-radius: 1rem;
+  position: static;
+}
+
+.card {
+  border-radius: 1.375rem;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  background: #f4f7fb;
+  box-shadow: 0px 20px 40px 0px rgba(59, 64, 86, 0.15);
+  width: 90%;
+  height: 80%;
+  margin: 5% auto;
+}
